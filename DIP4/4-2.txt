@@ -1,0 +1,9 @@
+>> %¸ßË¹ÂË²¨Æ÷
+>> clear all;
+>> test1 = imread('test1.pgm');
+>> test2 = imread('test2.tif');
+>> gaus1 = fspecial('gaussian',[7,7],1.5);
+>> gaus2 = fspecial('gaussian',[7,7]);
+>> subplot(2,2,1);imshow(test1);title('Ô´Í¼Ïñ'); subplot(2,2,2);imshow(imfilter(test1,gaus1,'replicate'));title('sigma = 1.5'); subplot(2,2,3); imshow(imfilter(test1,gaus2,'replicate'));title('init'); saveas(gcf,'comp1.bmp');
+>> subplot(2,2,1);imshow(test2);title('Ô´Í¼Ïñ'); subplot(2,2,2);imshow(imfilter(test2,gaus1,'replicate'));title('sigma = 1.5'); subplot(2,2,3); imshow(imfilter(test2,gaus2,'replicate'));title('init'); saveas(gcf,'comp2.bmp');
+>> 

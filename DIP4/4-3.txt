@@ -1,0 +1,8 @@
+>> %4-3 ¸ßÍ¨ÂË²¨Æ÷
+>> clear all;
+>> test3 = imread('test3_corrupt.pgm');
+>> test4 = imread('test4 copy.bmp');
+>> lapl = fspecial('laplacian',1.0);
+>> subplot(2,3,1);imshow(test3);title('Ô´Í¼Ïñ'); subplot(2,3,2);imshow(imsharpen(test3,'Radius',2,'Amount',2));title('unsharp masking'); subplot(2,3,3);imshow(edge(test3,'sobel'));title('sobel edge detector');  subplot(2,3,4);imshow(imfilter(test3,lapl,'replicate'));title('laplace edge detection'); subplot(2,3,5);imshow(edge(test3,'canny'));title('canny algorithm'); saveas(gcf,'cont3.bmp');
+>> subplot(2,3,1);imshow(test4);title('Ô´Í¼Ïñ'); subplot(2,3,2);imshow(imsharpen(test4,'Radius',2,'Amount',2));title('unsharp masking'); subplot(2,3,3);imshow(edge(test4,'sobel'));title('sobel edge detector');  subplot(2,3,4);imshow(imfilter(test4,lapl,'replicate'));title('laplace edge detection'); subplot(2,3,5);imshow(edge(test4,'canny'));title('canny algorithm'); saveas(gcf,'cont4.bmp');
+>> 

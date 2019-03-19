@@ -1,0 +1,12 @@
+>>  %4-1 µÍÍ¨ÂË²¨
+>> clear all;
+>> test1 = imread('test1.pgm');
+>> test2 = imread('test2.tif');
+>> gaus3 = fspecial('gaussian',[3,3]);
+>> gaus5 = fspecial('gaussian',[5,5]);
+>> gaus7 = fspecial('gaussian',[7,7]);
+>> subplot(2,2,1); imshow(test1); title('Ô´Í¼Ïñ'); subplot(2,2,2);imshow(imfilter(test1,gaus3,'replicate'));title('3¡Á3'); subplot(2,2,3);imshow(imfilter(test1,gaus5,'replicate'));title('5¡Á5'); subplot(2,2,4);imshow(imfilter(test1,gaus7,'replicate'));title('7¡Á7'); saveas(gcf,'gauss1.bmp');
+>> subplot(2,2,1); imshow(test2); title('Ô´Í¼Ïñ'); subplot(2,2,2);imshow(imfilter(test2,gaus3,'replicate'));title('3¡Á3'); subplot(2,2,3);imshow(imfilter(test2,gaus5,'replicate'));title('5¡Á5'); subplot(2,2,4);imshow(imfilter(test2,gaus7,'replicate'));title('7¡Á7'); saveas(gcf,'gauss2.bmp');
+>> subplot(2,2,1); imshow(test1); title('Ô´Í¼Ïñ'); subplot(2,2,2);imshow(median(test1,3), [0,255]);title('3¡Á3'); subplot(2,2,3);imshow(median(test1,5), [0,255]);title('5¡Á5'); subplot(2,2,4);imshow(median(test1,7), [0,255]);title('7¡Á7'); saveas(gcf,'medi1.bmp');
+>> subplot(2,2,1); imshow(test2); title('Ô´Í¼Ïñ'); subplot(2,2,2);imshow(median(test2,3), [0,255]);title('3¡Á3'); subplot(2,2,3);imshow(median(test2,5), [0,255]);title('5¡Á5'); subplot(2,2,4);imshow(median(test2,7), [0,255]);title('7¡Á7'); saveas(gcf,'medi2.bmp');
+>> 
